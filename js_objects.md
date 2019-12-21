@@ -117,11 +117,3 @@ console.log(user1, user2);
 user1.age = 100;
 console.log(user1, user2);
 ```
-
-
-
-
-```javaScript
-```
-```javaScript
-```

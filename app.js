@@ -1,16 +1,18 @@
-// object literals
-console.log(Math);
-console.log(Math.PI);
-console.log(Math.E);
+const ps = document.querySelectorAll('p');
 
-const area = 5.9;
-
-console.log(Math.round(area));
-console.log(Math.floor(area));
-console.log(Math.ceil(area));
-console.log(Math.trunc(area));
-
-// random numbers
-const random = Math.random();
-console.log(random);
-console.log(Math.round(random * 100));
+ps.forEach(p => {
+  if(p.textContent.includes('error')){
+    p.classList.add('error')
+  }else if(p.textContent.includes('success')){
+    p.classList.add('success');
+  }
+});
+console.log(ps);
+ps.forEach(p => {
+  if(p.textContent.includes('error')){
+    p.classList.toggle('error')
+  }else if(p.textContent.includes('success')){
+    p.classList.toggle('success');
+  }
+});
+console.log(ps);
