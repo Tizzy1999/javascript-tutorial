@@ -130,11 +130,44 @@ title.style.margin ='';
 ```javaScript
 const content = document.querySelector('.error');
 console.log(content.classList);
-
 content.classList.add("success");
 content.classList.remove('error');
 console.log(content.classList);
 ```
+- classList.toggle('class-name') will append defined class if not exist, or remove it if exist
 
 ```javaScript
+  const title = document.querySelector('.page-title');
+  title.classList.toggle('test');
+```
+
+## Parent, Children and Sibling
+
+#### children
+
+-  **Array.from()** used to convert HTMLCollection to an array
+```javaScript
+const article = document.querySelector('article');
+
+Array.from(article.children).forEach(child => {
+  child.classList.add('article-element');
+});
+console.log(article.children);
+
+```
+#### parentElement
+```javaScript
+const title = document.querySelector('h2');
+console.log(title);
+console.log(title.parentElement);
+
+```
+#### sibling
+```javaScript
+const title = document.querySelector('h2');
+console.log(title.nextElementSibling);
+console.log(title.previousElementSibling);
+
+console.log(title.nextElementSibling.parentElement.children);
+
 ```
