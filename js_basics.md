@@ -84,8 +84,41 @@ console.log(Math.trunc(area));
 const random = Math.random();
 console.log(random);
 console.log(Math.round(random * 100));
-
 ```
+
+## Primitive Types and Reference Types
+- primitive types: stored on stack
+- reference types: stored on heap
+
+
+![](assets/markdown-img-paste-20191221081658794.png)
+
+- when we make copies of primitive values, we make a new copy of the value on the stack
+
+- when we try to make a copy of a reference type, we only make a copy of the pointer on the stack
+
+
+![](assets/markdown-img-paste-2019122108212368.png)
+
+```javaScript
+// primitive types example
+let scoreOne = 50;
+let scoreTwo = scoreOne;
+console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
+scoreOne = 100;
+console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
+```
+
+```javaScript
+// reference types example
+const user1 = {name: 'ryn', age: 30};
+const user2 = user1;
+console.log(user1, user2);
+user1.age = 100;
+console.log(user1, user2);
+```
+
+
 
 
 ```javaScript
